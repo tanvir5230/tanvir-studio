@@ -36,12 +36,14 @@ const Homepage = () => {
               </span>
             </h4>
             <div className="d-flex justify-content-center mt-5">
-              <button
-                type="button"
-                className="btn btn-success text-capitalize font-weight-bold text-white"
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
+                className="btn btn-outline-success font-weight-bold text-capitalize"
               >
-                download my resume
-              </button>
+                download resume
+              </a>
             </div>
           </div>
         </div>

@@ -9,10 +9,7 @@ import AboutMe from "./components/about-me/AboutMe";
 function App() {
   return (
     <BrowserRouter>
-      <div
-        className="d-flex overflow-hidden"
-        style={{ width: "100vw", height: "100vh" }}
-      >
+      <div className="d-flex" style={{ width: "100vw", height: "100vh" }}>
         <MyNavbar />
         <Switch>
           <Route exact path="/">
