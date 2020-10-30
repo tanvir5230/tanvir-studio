@@ -14,14 +14,14 @@ const Skills = () => {
     { name: "mongodb", value: 90 },
     { name: "mongoose", value: 85 },
   ];
-  const otherTools = [
-    { name: "vs code" },
-    { name: "chrome dev tools" },
-    { name: "firebase" },
-    { name: "heroku" },
-    { name: "git" },
-    { name: "netlify" },
-  ];
+  // const otherTools = [
+  //   { name: "vs code" },
+  //   { name: "chrome dev tools" },
+  //   { name: "firebase" },
+  //   { name: "heroku" },
+  //   { name: "git" },
+  //   { name: "netlify" },
+  // ];
   const otherSkills = [
     {
       name: "leadership",
