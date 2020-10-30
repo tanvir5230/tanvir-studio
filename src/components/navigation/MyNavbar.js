@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { NavItem } from "reactstrap";
-import photo from "../../photo/whyus-2.jpg";
+import photo from "../../photo/myphoto.png";
 import "./navbar.css";
 
 const MyNavbar = () => {
