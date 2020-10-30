@@ -31,14 +31,14 @@ function App() {
           <Route path="/resume">
             <Resume />
           </Route>
-          <Route path="/portfolio">
-            <Portfolio />
-          </Route>
           <Route path="/blog">
             <Blog />
           </Route>
-          <Route pathd="/contact-me">
+          <Route path="/contact-me">
             <ContactMe />
+          </Route>
+          <Route path="/portfolio">
+            <Portfolio />
           </Route>
         </Switch>
       </div>

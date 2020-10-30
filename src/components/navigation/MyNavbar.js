@@ -49,7 +49,7 @@ const MyNavbar = () => {
               <NavItem>
                 <NavLink
                   activeStyle={{ color: "white", fontWeight: "bold" }}
-                  to={`${item.name}`}
+                  to={`/${item.name}`}
                 >
                   <p>
                     <span className={`fa fa-${item.icon}`}></span>
