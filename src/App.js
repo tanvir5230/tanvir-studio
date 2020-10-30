@@ -1,17 +1,25 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import MyNavbar from "./components/navigation/MyNavbar";
 import Homepage from "./components/home/Homepage";
 import AboutMe from "./components/about-me/AboutMe";
+import Resume from "./components/resume/Resume";
+import Blog from "./components/blog/Blog";
+import ContactMe from "./components/contact-me/ContactMe";
+import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
+  const location = useLocation();
   return (
     <BrowserRouter>
       <div className="d-flex" style={{ width: "100vw", height: "100vh" }}>
-        <MyNavbar />
-        <Switch>
+        <div className="d-none d-md-block">
+          <MyNavbar />
+        </div>
+
+        <Switch location={location}>
           <Route exact path="/">
             <Homepage />
           </Route>
@@ -21,10 +29,18 @@ function App() {
           <Route path="/about-me">
             <AboutMe />
           </Route>
-          <Route path="/resume">resume</Route>
-          <Route path="/portfolio">portfolio</Route>
-          <Route path="/blog">blog</Route>
-          <Route path="/contact-me">contact me</Route>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          <Route path="/portfolio">
+            <Portfolio />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route pathd="/contact-me">
+            <ContactMe />
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>

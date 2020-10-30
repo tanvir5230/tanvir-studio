@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
+import Topbar from "../navigation/Topbar";
 
 const AboutMe = () => {
   const age = new Date().getFullYear() - 1997;
@@ -11,53 +12,60 @@ const AboutMe = () => {
     { title: "phone", text: "+8801521407975" },
   ];
   return (
-    <Container fluid className="px-5 overflow-auto">
-      <h1 className="border-bottom d-flex justify-content-between py-3 px-1">
-        <span className="text-success">About Me</span>
-        <span className="fa fa-user text-success"></span>
-      </h1>
+    <>
+      <Container
+        fluid
+        className="p-0 position-relative"
+        style={{ overflowX: "hidden", overflowY: "auto" }}
+      >
+        <Topbar />
+        <h1 className="px-5 border-bottom d-flex justify-content-between py-3 px-1">
+          <span className="text-success">About Me</span>
+          <span className="fa fa-user text-success"></span>
+        </h1>
 
-      <Row>
-        <Col className="py-4" xs={12} lg={7}>
-          <h3>MERN Stack Developer</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            minus quis est, ipsam voluptates alias ex et quibusdam mollitia
-            exercitationem laborum molestiae odit amet reiciendis? Commodi non
-            odit laudantium quos.
-          </p>
-        </Col>
-        <Col xs={12} lg={5} className="py-4">
-          <h3>Personal Information</h3>
-          <div className="pb-4">
-            {info.map((item) => {
-              return (
-                <p>
-                  <span
-                    className="text-right mr-2 font-weight-bold"
-                    style={{ width: "100px" }}
-                  >
-                    {item.title}:
-                  </span>
-                  <span className="text-left text-wrap">{item.text}</span>
-                </p>
-              );
-            })}
-          </div>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
-            className="btn btn-outline-success font-weight-bold text-capitalize"
-          >
-            download resume
-          </a>
-        </Col>
-      </Row>
-      <Row className="justify-content-center">
-        <Services />
-      </Row>
-    </Container>
+        <Row className="px-5">
+          <Col className="py-4" xs={12} lg={7}>
+            <h3>MERN Stack Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              minus quis est, ipsam voluptates alias ex et quibusdam mollitia
+              exercitationem laborum molestiae odit amet reiciendis? Commodi non
+              odit laudantium quos.
+            </p>
+          </Col>
+          <Col xs={12} lg={5} className="py-4">
+            <h3>Personal Information</h3>
+            <div className="pb-4">
+              {info.map((item) => {
+                return (
+                  <p>
+                    <span
+                      className="text-right mr-2 font-weight-bold"
+                      style={{ width: "100px" }}
+                    >
+                      {item.title}:
+                    </span>
+                    <span className="text-left text-wrap">{item.text}</span>
+                  </p>
+                );
+              })}
+            </div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
+              className="btn btn-outline-success font-weight-bold text-capitalize"
+            >
+              <span className="fa fa-download mr-2"></span>download resume
+            </a>
+          </Col>
+        </Row>
+        <Row className="justify-content-center px-5">
+          <Services />
+        </Row>
+      </Container>
+    </>
   );
 };
 

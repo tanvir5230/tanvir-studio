@@ -1,11 +1,26 @@
 import React from "react";
 import ParticleBg from "../home/ParticleBg";
 import "./homepage.css";
+import Topbar from "../navigation/Topbar";
 
 const Homepage = () => {
   return (
     <>
       <div className="w-100 h-100 p-0 m-0 overflow-hidden position-relative">
+        <div
+          className="d-md-none"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            zIndex: "1000",
+            height: "50px",
+            width: "100%",
+          }}
+        >
+          <Topbar />
+        </div>
+
         <div className="homepage w-100 h-100 overflow-hidden"></div>
         <div className="w-100 h-100 particle-container overflow-hidden">
           <ParticleBg />
@@ -42,7 +57,7 @@ const Homepage = () => {
                 href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
                 className="btn btn-outline-success font-weight-bold text-capitalize"
               >
-                download resume
+                <span className="fa fa-download mr-2"></span>download resume
               </a>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { NavItem } from "reactstrap";
 import photo from "../../photo/whyus-2.jpg";
+import "./navbar.css";
 
 const MyNavbar = () => {
   const navUrl = [
@@ -24,7 +25,7 @@ const MyNavbar = () => {
   ];
   return (
     <div
-      className="d-none d-md-block p-0 m-0"
+      className="p-0 m-0"
       style={{
         height: "100%",
         width: "200px",
@@ -46,7 +47,10 @@ const MyNavbar = () => {
           {navUrl.map((item) => {
             return (
               <NavItem>
-                <NavLink to={`${item.name}`}>
+                <NavLink
+                  activeStyle={{ color: "white", fontWeight: "bold" }}
+                  to={`${item.name}`}
+                >
                   <p>
                     <span className={`fa fa-${item.icon}`}></span>
                   </p>
