@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -11,7 +11,6 @@ import ContactMe from "./components/contact-me/ContactMe";
 import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
-  const location = useLocation();
   return (
     <BrowserRouter>
       <div className="d-flex" style={{ width: "100vw", height: "100vh" }}>
@@ -19,7 +18,7 @@ function App() {
           <MyNavbar />
         </div>
 
-        <Switch location={location}>
+        <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
