@@ -5,7 +5,7 @@ import doctors_portal from "../../photo/projects/doctors-portal.png";
 import creative_agency from "../../photo/projects/creative-agency.png";
 import hot_onion from "../../photo/projects/hot-onion.png";
 import volunteer_network from "../../photo/projects/volunteer-network.png";
-import hot_gadgets from "../../photo/projects/hot_gadgets.png";
+import hot_gadgets from "../../photo/projects/hot_gadgets.PNG";
 import "./portfolio.css";
 //ok
 const Portfolio = () => {
