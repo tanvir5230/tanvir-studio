@@ -28,10 +28,12 @@ const AboutMe = () => {
           <Col className="py-4" xs={12} lg={7}>
             <h3>MERN Stack Developer</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              minus quis est, ipsam voluptates alias ex et quibusdam mollitia
-              exercitationem laborum molestiae odit amet reiciendis? Commodi non
-              odit laudantium quos.
+              A Software Engineer - Full Stack Developer with several years of
+              experience, seeking a challenging career opportunity to attain and
+              sustain a responsible position, which is conducive to learn and
+              grow at professional as well as personal level through absolute
+              commitment and leadership skills with a strong endeavor for team
+              spirit.
             </p>
           </Col>
           <Col xs={12} lg={5} className="py-4">
