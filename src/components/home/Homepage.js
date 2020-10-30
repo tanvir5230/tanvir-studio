@@ -57,7 +57,8 @@ const Homepage = () => {
                 href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
                 className="btn btn-outline-success font-weight-bold text-capitalize"
               >
-                <span className="fa fa-download mr-2"></span>download resume
+                <span className="fa fa-download mr-2"></span>
+                <span className="text-white">download resume</span>
               </a>
             </div>
           </div>

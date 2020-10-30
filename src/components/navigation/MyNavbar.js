@@ -21,7 +21,7 @@ const MyNavbar = () => {
       icon: "linkedin",
     },
     { link: "https://github.com/tanvir5230", icon: "github" },
-    { link: "https://twitter.com", icon: "twitter" },
+    { link: "https://twitter.com/ibn_touhid", icon: "twitter" },
   ];
   return (
     <div
