@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Hobby from "./Hobby";
 import Language from "./Language";
 import Skills from "./Skills";
+import "./resume.css";
 
 const Resume = () => {
   return (

@@ -1,0 +1,13 @@
+.experience {
+  height: 90vh;
+  overflow: auto;
+}
+.experience::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.experience {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
