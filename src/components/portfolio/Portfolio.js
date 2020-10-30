@@ -5,7 +5,8 @@ import doctors_portal from "../../photo/projects/doctors-portal.png";
 import creative_agency from "../../photo/projects/creative-agency.png";
 import hot_onion from "../../photo/projects/hot-onion.png";
 import volunteer_network from "../../photo/projects/volunteer-network.png";
-import hot_gadgets from "../../photo/projects/hot_gadgets.PNG";
+import hot_gadgets from "../../photo/projects/hot_gadgets.png";
+import "./portfolio.css";
 
 const Portfolio = () => {
   const projects = [
@@ -62,11 +63,11 @@ const Portfolio = () => {
       <Row className="flex-wrap justify-content-center justify-content-md-start align-items-end px-3">
         {projects.map((project) => {
           return (
-            <Col xs={10} md={4} lg={3} className="mt-4">
+            <Col xs={10} sm={6} lg={4} xl={3} className="mt-4">
               <Card className="shadow">
                 <div
                   className="overflow-hidden"
-                  style={{ height: "160px", width: "300px" }}
+                  style={{ height: "160px", width: "100%" }}
                 >
                   <CardImg top src={project.image} className="rounded" />
                 </div>
