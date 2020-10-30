@@ -71,7 +71,10 @@ const MyNavbar = () => {
               );
             })}
           </div>
-          <p className="p-0 m-0 text-center text-white text-capitalize">
+          <p
+            className="p-0 m-0 text-center text-white text-capitalize"
+            style={{ fontSize: ".9rem" }}
+          >
             all rights reserved by <br /> Tanvir Ibn Touhid
           </p>
           <p className="text-white">
