@@ -30,13 +30,11 @@ const Skills = () => {
   ];
   return (
     <Col xs={10} lg={5} className="mt-3 pl-lg-4">
-      <h2>
-        <span className="text-success border-success border-bottom">
-          Skills
-        </span>
+      <h2 className="pb-4">
+        <span className="text-warning heading-border">Skills</span>
       </h2>
       <div>
-        <h5 className="font-weight-bolder my-3">Front End Technologies: </h5>
+        <h5 className="font-weight-bolder mt-4">Front End Technologies: </h5>
         {frontEnd.map((fe) => {
           return (
             <div className="mt-1">

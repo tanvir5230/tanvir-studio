@@ -20,14 +20,12 @@ const Education = () => {
   ];
   return (
     <Col xs={10} lg={5} className="mt-3">
-      <h2 className="py-1">
-        <span className="text-success border-success border-bottom">
-          Education
-        </span>
+      <h2 className="mb-5">
+        <span className="heading-border text-warning">Education</span>
       </h2>
       {education.map((edu) => {
         return (
-          <div className="py-3">
+          <div>
             <h5>
               <span className="font-weight-bold">{edu.degree}</span> in{" "}
               <span className="font-weight-bold">{edu.department},</span>

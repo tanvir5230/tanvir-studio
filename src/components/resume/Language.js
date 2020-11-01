@@ -8,8 +8,8 @@ const Language = () => {
   ];
   return (
     <Col xs={10} lg={5} className="mt-3 pl-lg-4">
-      <h2 className="text-success">
-        <span className="border-success border-bottom">Language</span>
+      <h2 className="mb-5">
+        <span className="heading-border text-warning">Language</span>
       </h2>
       {language.map((lng) => {
         return (

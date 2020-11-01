@@ -5,3 +5,7 @@ img:hover {
 .btn:hover {
   transition: all 0.6s;
 }
+.project-card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.6s;
+}

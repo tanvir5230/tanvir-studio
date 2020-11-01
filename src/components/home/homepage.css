@@ -31,9 +31,3 @@
   height: 100%;
   z-index: 100;
 }
-.text-success {
-  color: #08bb73 !important;
-}
-.btn:hover {
-  color: white;
-}

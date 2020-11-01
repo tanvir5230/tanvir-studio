@@ -9,7 +9,7 @@ const ParticleBg = () => {
       params={{
         particles: {
           number: {
-            value: 50,
+            value: 160,
             density: {
               enable: false,
             },
@@ -17,42 +17,25 @@ const ParticleBg = () => {
           size: {
             value: 5,
             random: true,
-            anim: {
-              speed: 0.5,
-              size_min: 0.3,
-            },
+          },
+          move: {
+            direction: "bottom",
+            out_mode: "out",
           },
           line_linked: {
             enable: false,
           },
-          move: {
-            random: false,
-            speed: 1,
-            direction: "top",
-            out_mode: "out",
-          },
         },
         interactivity: {
           events: {
-            onhover: {
-              enable: false,
-              mode: "bubble",
-            },
             onclick: {
-              enable: false,
-              mode: "repulse",
+              enable: true,
+              mode: "remove",
             },
           },
           modes: {
-            bubble: {
-              distance: 250,
-              duration: 2,
-              size: 0,
-              opacity: 0,
-            },
-            repulse: {
-              distance: 400,
-              duration: 4,
+            remove: {
+              particles_nb: 10,
             },
           },
         },

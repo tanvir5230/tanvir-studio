@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardImg, Col, Container, Row } from "reactstrap";
 import Topbar from "../navigation/Topbar";
+import Heading from "../shared/Heading";
 import doctors_portal from "../../photo/projects/doctors-portal.png";
 import creative_agency from "../../photo/projects/creative-agency.png";
 import hot_onion from "../../photo/projects/hot-onion.png";
@@ -49,22 +50,16 @@ const Portfolio = () => {
   return (
     <Container
       fluid
-      className="p-0"
+      className="dark-bg"
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
       <Topbar />
-      <h1
-        className="px-5 text-success d-flex justify-content-between py-3"
-        style={{ fontSize: "30px" }}
-      >
-        <span>Portfolio</span>
-        <span className="fa fa-briefcase"></span>
-      </h1>
-      <Row className="flex-wrap justify-content-center justify-content-md-start align-items-end px-3">
+      <Heading title="Portfolio" icon="briefcase" />
+      <Row className="flex-wrap justify-content-center justify-content-md-start align-items-end p-3">
         {projects.map((project) => {
           return (
             <Col xs={10} sm={6} lg={4} xl={3} className="mt-4">
-              <Card className="shadow">
+              <Card className="shadow project-card">
                 <div
                   className="overflow-hidden"
                   style={{ height: "160px", width: "100%" }}

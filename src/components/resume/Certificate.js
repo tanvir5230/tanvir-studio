@@ -45,8 +45,8 @@ const Certificate = () => {
 
   return (
     <Col xs={10} lg={5} className="mt-3">
-      <h2 className="text-success">
-        <span className="border-success border-bottom">Certificates</span>
+      <h2 className="text-warning mb-5">
+        <span className="heading-border">Certificates</span>
       </h2>
       <Row className="py-3">
         <Col

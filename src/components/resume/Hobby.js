@@ -9,8 +9,8 @@ const Hobby = () => {
   ];
   return (
     <Col xs={10} lg={5} className="mt-3 pl-lg-4">
-      <h2 className="text-success">
-        <span className="border-success border-bottom">Hobbies</span>
+      <h2 className="text-warning mb-5">
+        <span className="heading-border">Hobbies</span>
       </h2>
       <ul>
         {hobbies.map((hobby) => {

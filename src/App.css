@@ -1,3 +1,21 @@
-h1 {
-  font-size: 2rem;
+.dark-bg {
+  background-color: #06021f !important;
+  color: white !important;
+}
+
+.heading-border {
+  position: relative;
+}
+.heading-border:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  right: 15px;
+  background-color: #ffc107;
+  height: 7px;
+  border-radius: 10px 10px 10px 10px;
+}
+.shadow {
+  box-shadow: 2px 2px 5px #fff, -2px -2px 5px #fff !important;
 }

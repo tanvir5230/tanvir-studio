@@ -4,7 +4,7 @@ import { Col, Row } from "reactstrap";
 const MyInfo = () => {
   const myInfo = [
     {
-      icon: "phone",
+      icon: "mobile",
       title: "+8801521407975",
       subtitle: "I will be available from 10 a.m. to 8 p.m.",
     },
@@ -12,7 +12,7 @@ const MyInfo = () => {
       icon: "map-marker",
       title: "Bangladesh",
       subtitle:
-        "I live in Cumilla which is one of the most important town of bangladesh",
+        "I live in Cumilla which is one of the most important towns of bangladesh",
     },
     {
       icon: "envelope",
@@ -26,23 +26,21 @@ const MyInfo = () => {
       {myInfo.map((info) => {
         return (
           <Row className="mt-3 justify-content-center align-items-center ">
-            <Col xs={1} className="mt-3">
+            <Col xs={1}>
               {info.icon === "envelope" && (
                 <span
-                  className={`text-success fa fa-${info.icon}`}
-                  style={{ fontSize: "30px" }}
+                  className={`text-warning fa fa-${info.icon} fa-2x`}
                 ></span>
               )}
               {info.icon !== "envelope" && (
                 <span
-                  className={`text-success fa fa-${info.icon}`}
-                  style={{ fontSize: "40px" }}
+                  className={`text-warning fa fa-${info.icon} fa-2x`}
                 ></span>
               )}
             </Col>
             <Col xs={11} className="mt-3 px-4">
               <h6 className="mt-1">{info.title}</h6>
-              <p className="text-secondary card-subtitle pt-2">
+              <p style={{ color: "silver", fontSize: ".7rem" }}>
                 {info.subtitle}
               </p>
             </Col>

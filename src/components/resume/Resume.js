@@ -7,23 +7,20 @@ import Experience from "./Experience";
 import Hobby from "./Hobby";
 import Language from "./Language";
 import Skills from "./Skills";
+import Heading from "../shared/Heading";
 import "./resume.css";
 
 const Resume = () => {
   return (
     <Container
       fluid
-      className="p-0"
+      className="p-0 dark-bg"
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
       <Topbar />
-      <h1
-        className="px-5 text-success d-flex justify-content-between border-bottom py-3"
-        style={{ fontSize: "40px" }}
-      >
-        <span>Resume</span>
-        <span className="fa fa-id-badge"></span>
-      </h1>
+      <Container>
+        <Heading title="Resume" icon="id-badge" />
+      </Container>
       <Row className="justify-content-center align-content-center">
         <Experience />
         <Skills />

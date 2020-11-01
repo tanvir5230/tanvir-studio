@@ -3,20 +3,19 @@ import { Container, Row } from "reactstrap";
 import Topbar from "../navigation/Topbar";
 import MyForm from "./MyForm";
 import MyInfo from "./MyInfo";
+import Heading from "../shared/Heading";
 
 const ContactMe = () => {
   return (
     <Container
       fluid
-      className="p-0"
+      className="p-0 dark-bg"
       style={{ boxSizing: "border-box", overflowX: "hidden" }}
     >
       <Topbar />
-      <h1 className="text-center mt-4">
-        <span className="border-success border-bottom text-success">
-          Contact Me
-        </span>
-      </h1>
+      <Container>
+        <Heading title="Contact me" icon="envelope" />
+      </Container>
       <Row className="justify-content-center my-3">
         <MyInfo />
         <MyForm />

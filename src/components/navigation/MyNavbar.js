@@ -7,7 +7,7 @@ import "./navbar.css";
 const MyNavbar = () => {
   const navUrl = [
     { name: "home", icon: "home" },
-    { name: "about-me", icon: "info" },
+    { name: "about-me", icon: "info-circle" },
     { name: "resume", icon: "file" },
     { name: "portfolio", icon: "briefcase" },
     { name: "blog", icon: "rss" },
@@ -25,11 +25,11 @@ const MyNavbar = () => {
   ];
   return (
     <div
-      className="p-0 m-0"
+      className="p-0 m-0 left-side"
       style={{
         height: "100%",
         width: "200px",
-        backgroundColor: "rgb(42,43,48)",
+        color: "black",
       }}
     >
       <img src={photo} alt="me" width="200px" height="200px" />
@@ -43,10 +43,10 @@ const MyNavbar = () => {
         className="text-center text-uppercase fat-nav justify-content-between"
         style={{ transform: "translateY(-48px)" }}
       >
-        <div>
+        <div style={{ marginTop: "50px" }}>
           {navUrl.map((item) => {
             return (
-              <NavItem>
+              <NavItem className="py-2">
                 <NavLink
                   activeStyle={{ color: "white", fontWeight: "bold" }}
                   to={`/${item.name}`}
