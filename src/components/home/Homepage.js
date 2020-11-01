@@ -1,4 +1,5 @@
 import React from "react";
+import ReactTypingEffect from "react-typing-effect";
 import ParticleBg from "../home/ParticleBg";
 import "./homepage.css";
 import Topbar from "../navigation/Topbar";
@@ -36,26 +37,28 @@ const Homepage = () => {
               }}
             >
               <span>Tanvir</span>{" "}
-              <span className="text-success">Ibn Touhid</span>
+              <span className="text-warning">Ibn Touhid</span>
             </h1>
             <h4
               className="text-center text-white font-weight-light"
               style={{ fontSize: "40px" }}
             >
-              I am a{" "}
-              <span
-                className="font-weight-bold"
-                style={{ borderBottom: "2px solid green" }}
-              >
-                web developer
-              </span>
+              I am a <br />
+              <ReactTypingEffect
+                text={["front end developer", "MERN stack developer"]}
+                speed={200}
+                eraseSpeed={100}
+                eraseDelay={100}
+                typingDelay={200}
+                cursor={" "}
+              />
             </h4>
             <div className="d-flex justify-content-center mt-5">
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
-                className="btn btn-outline-success font-weight-bold text-capitalize"
+                className="btn btn-outline-warning font-weight-bold text-capitalize"
               >
                 <span className="fa fa-download mr-2"></span>
                 <span className="text-white">download resume</span>

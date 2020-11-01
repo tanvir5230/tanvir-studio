@@ -82,19 +82,19 @@ const RenderCertificate = ({ certificates, i }) => {
         <CardImgOverlay style={{ backgroundColor: "black", opacity: ".7" }}>
           <div className="text-white d-flex flex-column justify-content-center align-items-center w-100 h-100">
             <p>
-              <span className="text-success font-weight-bolder text-uppercase">
+              <span className="text-warning font-weight-bolder text-uppercase">
                 course name:{" "}
               </span>
               <span>{cf.name}</span>
             </p>
             <p>
-              <span className="text-success font-weight-bolder text-uppercase">
+              <span className="text-warning font-weight-bolder text-uppercase">
                 Instructor:{" "}
               </span>
               <span>{cf.instructor}</span>
             </p>
             <p>
-              <span className="text-success font-weight-bolder text-uppercase">
+              <span className="text-warning font-weight-bolder text-uppercase">
                 platform:{" "}
               </span>
               <span>{cf.platform}</span>
