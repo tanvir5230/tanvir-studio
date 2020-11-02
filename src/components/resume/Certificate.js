@@ -54,7 +54,7 @@ const Certificate = () => {
           className="d-flex justify-content-center align-items-center"
         >
           <button className="btn" onClick={decrease}>
-            <span className="fa fa-caret-left fa-2x"></span>
+            <span className="fa fa-caret-left fa-2x text-warning"></span>
           </button>
         </Col>
         <Col xs={10}>
@@ -65,7 +65,7 @@ const Certificate = () => {
           className="d-flex justify-content-center align-items-center"
         >
           <button className="btn" onClick={increase}>
-            <span className="fa fa-caret-right fa-2x"></span>
+            <span className="fa fa-caret-right fa-2x text-warning"></span>
           </button>
         </Col>
       </Row>

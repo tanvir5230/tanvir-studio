@@ -5,7 +5,7 @@ import Heading from "../shared/Heading";
 
 const Blog = () => {
   return (
-    <Container fluid className="p-0 dark-bg">
+    <Container fluid className="p-0 dark-bg h-100 overflow-auto">
       <Topbar />
       <Container>
         <Heading title="blog" icon="rss" />

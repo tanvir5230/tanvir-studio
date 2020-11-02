@@ -9,8 +9,12 @@ const ContactMe = () => {
   return (
     <Container
       fluid
-      className="p-0 dark-bg"
-      style={{ boxSizing: "border-box", overflowX: "hidden" }}
+      className="p-0 dark-bg h-100"
+      style={{
+        boxSizing: "border-box",
+        overflowX: "hidden",
+        overflowY: "auto",
+      }}
     >
       <Topbar />
       <Container>

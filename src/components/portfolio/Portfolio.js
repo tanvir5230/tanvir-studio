@@ -50,7 +50,7 @@ const Portfolio = () => {
   return (
     <Container
       fluid
-      className="dark-bg"
+      className="dark-bg h-100 c-scrollbar"
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
       <Topbar />

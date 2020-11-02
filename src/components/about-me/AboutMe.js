@@ -19,7 +19,7 @@ const AboutMe = () => {
   return (
     <>
       <div
-        className="dark-bg w-100"
+        className="dark-bg w-100 h-100 c-scrollbar"
         style={{ overflowX: "hidden", overflowY: "auto" }}
       >
         <Container className="position-relative">

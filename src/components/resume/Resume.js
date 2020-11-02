@@ -14,7 +14,7 @@ const Resume = () => {
   return (
     <Container
       fluid
-      className="p-0 dark-bg"
+      className="p-0 dark-bg h-100 c-scrollbar"
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
       <Topbar />
