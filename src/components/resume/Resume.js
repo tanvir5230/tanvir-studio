@@ -18,9 +18,9 @@ const Resume = () => {
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
       <Topbar />
-      <Container>
-        <Heading title="Resume" icon="id-badge" />
-      </Container>
+
+      <Heading title="Resume" icon="id-badge" />
+
       <Row className="justify-content-center align-content-center">
         <Experience />
         <Skills />

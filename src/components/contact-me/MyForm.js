@@ -1,15 +1,14 @@
-import React,{useRef, useState, useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Col, Alert } from "reactstrap";
 import emailjs from "emailjs-com";
 
 const MyForm = () => {
   const [success, setSuccess] = useState(false);
-  const [failed, setFailed] = useState(false)
+  const [failed, setFailed] = useState(false);
 
   const name = useRef();
   const email = useRef();
   const message = useRef();
-
 
   function sendEmail(e) {
     e.preventDefault();
@@ -23,7 +22,7 @@ const MyForm = () => {
       )
       .then(
         (result) => {
-          if(result.text){
+          if (result.text) {
             setSuccess(true);
             name.current.value = "";
             email.current.value = "";
@@ -35,22 +34,21 @@ const MyForm = () => {
         }
       );
   }
-  useEffect(()=>{
-    if(success){
+  useEffect(() => {
+    if (success) {
       setTimeout(() => {
-        setSuccess(false)
+        setSuccess(false);
       }, 3000);
     }
-    if(failed){
+    if (failed) {
       setTimeout(() => {
-        setFailed(false)
+        setFailed(false);
       }, 2000);
     }
-  },[success,failed])
-  
-  
+  }, [success, failed]);
+
   return (
-    <Col xs={9} lg={6} className="px-lg-5 mt-5 mt-lg-0">
+    <Col xs={11} lg={6} className="px-lg-5 mt-5 mt-lg-0">
       <h3 className="my-3">
         <span
           className="border-bottom border-warning"
@@ -61,7 +59,7 @@ const MyForm = () => {
         <span className="border-bottom">w Can I Help You?</span>
       </h3>
       <form onSubmit={sendEmail}>
-        <input type="hidden" name="contact_form"/>
+        <input type="hidden" name="contact_form" />
         <input
           type="text"
           name="user_name"
@@ -91,12 +89,16 @@ const MyForm = () => {
           Send Message
         </button>
       </form>
-      { success && <Alert color="success" className="mt-3 rounded">
-        Your message was sent successfully.
-      </Alert>}
-      { failed && <Alert  color="danger" className="mt-3 rounded">
-        your message was not sent. Try again.
-      </Alert>}
+      {success && (
+        <Alert color="success" className="mt-3 rounded">
+          Your message was sent successfully.
+        </Alert>
+      )}
+      {failed && (
+        <Alert color="danger" className="mt-3 rounded">
+          your message was not sent. Try again.
+        </Alert>
+      )}
     </Col>
   );
 };

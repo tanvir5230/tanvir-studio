@@ -22,7 +22,7 @@ const MyInfo = () => {
     },
   ];
   return (
-    <Col xs={9} lg={4}>
+    <Col xs={11} lg={4}>
       {myInfo.map((info) => {
         return (
           <Row className="mt-3 justify-content-center align-items-center ">
@@ -40,7 +40,7 @@ const MyInfo = () => {
             </Col>
             <Col xs={11} className="mt-3 px-4">
               <h6 className="mt-1">{info.title}</h6>
-              <p style={{ color: "silver", fontSize: ".7rem" }}>
+              <p style={{ color: "silver", fontSize: "1rem" }}>
                 {info.subtitle}
               </p>
             </Col>

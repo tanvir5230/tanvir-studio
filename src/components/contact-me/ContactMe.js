@@ -9,7 +9,7 @@ const ContactMe = () => {
   return (
     <Container
       fluid
-      className="p-0 dark-bg h-100"
+      className="dark-bg h-100"
       style={{
         boxSizing: "border-box",
         overflowX: "hidden",
@@ -17,9 +17,9 @@ const ContactMe = () => {
       }}
     >
       <Topbar />
-      <Container>
-        <Heading title="Contact me" icon="envelope" />
-      </Container>
+
+      <Heading title="Contact me" icon="envelope" />
+
       <Row className="justify-content-center my-3">
         <MyInfo />
         <MyForm />

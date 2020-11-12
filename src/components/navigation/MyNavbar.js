@@ -30,20 +30,20 @@ const MyNavbar = () => {
         height: "100%",
         width: "200px",
         color: "black",
+        position: "relative",
       }}
     >
-      <img src={photo} alt="me" width="200px" height="200px" />
-      <h5
-        className="text-center bg-warning py-2 text-white"
-        style={{ opacity: ".9", transform: "translateY(-40px)" }}
-      >
-        Tanvir Ibn Touhid
-      </h5>
-      <div
-        className="text-center text-uppercase fat-nav justify-content-between"
-        style={{ transform: "translateY(-48px)" }}
-      >
-        <div style={{ marginTop: "50px" }}>
+      <div>
+        <img src={photo} alt="me" width="200px" height="200px" />
+        <h5
+          className="text-center bg-warning py-2 text-white"
+          style={{ opacity: ".9", transform: "translateY(-40px)" }}
+        >
+          Tanvir Ibn Touhid
+        </h5>
+      </div>
+      <div className="text-center text-uppercase fat-nav justify-content-between">
+        <div>
           {navUrl.map((item) => {
             return (
               <NavItem className="py-2">
@@ -60,29 +60,28 @@ const MyNavbar = () => {
             );
           })}
         </div>
-
-        <div style={{ transform: "translateY(80px)" }}>
-          <div className="d-flex justify-content-around social">
-            {social.map((sc) => {
-              return (
-                <a className="m-0 p-0" href={`${sc.link}`}>
-                  <span className={`fa fa-${sc.icon}`}></span>
-                </a>
-              );
-            })}
-          </div>
-          <p
-            className="p-0 m-0 text-center text-white text-capitalize"
-            style={{ fontSize: ".9rem" }}
-          >
-            all rights reserved by <br /> Tanvir Ibn Touhid
-          </p>
-          <p className="text-white">
-            <span className="fa fa-copyright">
-              <span className="ml-2">{new Date().getFullYear()}</span>
-            </span>
-          </p>
+      </div>
+      <div style={{ position: "absolute", bottom: "0", left: "0", right: "0" }}>
+        <div className="d-flex justify-content-around social">
+          {social.map((sc) => {
+            return (
+              <a className="m-0 p-0" href={`${sc.link}`}>
+                <span className={`fa fa-${sc.icon}`}></span>
+              </a>
+            );
+          })}
         </div>
+        <p
+          className="p-0 m-0 text-center text-white text-capitalize"
+          style={{ fontSize: ".9rem" }}
+        >
+          all rights reserved by <br /> Tanvir Ibn Touhid
+        </p>
+        <p className="text-white text-center">
+          <span className="fa fa-copyright">
+            <span className="ml-2">{new Date().getFullYear()}</span>
+          </span>
+        </p>
       </div>
     </div>
   );
