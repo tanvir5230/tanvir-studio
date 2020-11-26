@@ -1,32 +1,14 @@
 import React from "react";
-import ReactTypingEffect from "react-typing-effect";
 import ParticleBg from "../home/ParticleBg";
 import "./homepage.css";
-import Topbar from "../navigation/Topbar";
 
 const Homepage = () => {
-  return (
-    <>
-      <div className="w-100 h-100 p-0 m-0 overflow-hidden position-relative">
-        <div
-          className="d-md-none"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: "1000",
-            height: "50px",
-            width: "100%",
-          }}
-        >
-          <Topbar />
-        </div>
+  return <></>;
+};
 
-        <div className="homepage w-100 h-100 overflow-hidden"></div>
-        <div className="w-100 h-100 particle-container overflow-hidden">
-          <ParticleBg />
-        </div>
-        <div className="w-100 h-100 content d-flex justify-content-center align-items-center bg-transparent">
+export default Homepage;
+{
+  /* <div className="w-100 h-100 content d-flex justify-content-center align-items-center bg-transparent">
           <div className="w-100">
             <h1
               className="text-center text-white text-uppercase font-weight-bold"
@@ -65,10 +47,5 @@ const Homepage = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Homepage;
+        </div> */
+}
