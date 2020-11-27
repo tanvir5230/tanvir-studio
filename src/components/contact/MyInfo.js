@@ -22,7 +22,7 @@ const MyInfo = () => {
     },
   ];
   return (
-    <Col xs={11} lg={4}>
+    <Col xs={11}>
       {myInfo.map((info) => {
         return (
           <Row className="mt-3 justify-content-center align-items-center ">

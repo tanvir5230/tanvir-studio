@@ -2,42 +2,58 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, NavItem } from "reactstrap";
 import "./navbar.css";
+import logo from "../../logo.png";
 
 const MyNavbar = () => {
   const navUrl = [
-    { name: "home", icon: "home" },
-    { name: "about-me", icon: "user-o" },
+    { name: null, icon: logo },
+    { name: "about", icon: "user-o" },
     { name: "resume", icon: "file-o" },
     { name: "portfolio", icon: "briefcase" },
     { name: "blog", icon: "commenting-o" },
-    { name: "contact-me", icon: "envelope-o" },
+    { name: "contact", icon: "envelope-o" },
   ];
 
-  // const social = [
-  //   { link: "https://facebook.com/tanbir.ahmed", icon: "facebook-official" },
-  //   {
-  //     link: "https://www.linkedin.com/in/tanvir-ibn-touhid-tanvir/",
-  //     icon: "linkedin",
-  //   },
-  //   { link: "https://github.com/tanvir5230", icon: "github" },
-  //   { link: "https://twitter.com/ibn_touhid", icon: "twitter" },
-  // ];
   return (
-    <Nav vertical className="text-center">
+    <Nav vertical className="text-center h-100">
       {navUrl.map((item) => {
-        return (
-          <NavItem className="border-bottom py-3">
+        return item.name === null ? (
+          <NavItem
+            className="border-bottom d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
             <NavLink
               style={{ color: "#838383" }}
-              activeStyle={{ color: "blue", fontWeight: "bold" }}
+              activeClassName="rounded-circle border"
+              to="/home"
+            >
+              <img src={item.icon} alt="" width="30" height="30" />
+            </NavLink>
+          </NavItem>
+        ) : (
+          <NavItem
+            className="border-bottom d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            <NavLink
+              style={{ color: "#838383" }}
+              activeStyle={{ fontWeight: "bold" }}
               to={`/${item.name}`}
             >
               <span
                 className={`fa fa-${item.icon}`}
-                style={{ fontSize: "2rem" }}
+                style={{ fontSize: "1.5rem" }}
               ></span>
               <br />
-              <span>{item.name}</span>
+              <span
+                style={{
+                  fontSize: ".9rem",
+                  fontFamily: "sans-serif",
+                  letterSpacing: "2px",
+                }}
+              >
+                {item.name}
+              </span>
             </NavLink>
           </NavItem>
         );

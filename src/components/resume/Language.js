@@ -7,7 +7,7 @@ const Language = () => {
     { level: "proficient", name: "english" },
   ];
   return (
-    <Col xs={10} lg={5} className="mt-3 pl-lg-4">
+    <Col xs={10} className="mt-3 pl-lg-4">
       <h2 className="mb-5">
         <span className="heading-border text-warning">Language</span>
       </h2>

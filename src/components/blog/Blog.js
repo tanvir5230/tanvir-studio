@@ -10,8 +10,6 @@ import {
   Container,
   Row,
 } from "reactstrap";
-import Topbar from "../navigation/Topbar";
-import Heading from "../shared/Heading";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState(null);
@@ -33,9 +31,7 @@ const Blog = () => {
       });
   }, []);
   return (
-    <Container fluid className="dark-bg h-100 overflow-auto">
-      <Topbar />
-      <Heading title="blog" icon="rss" />
+    <Container fluid className="bg-white h-100 overflow-auto">
       <Row className="justify-content-center justify-content-md-start align-items-baseline p-3">
         {blogs === null && (
           <p className="text-center">
@@ -45,7 +41,7 @@ const Blog = () => {
         {blogs &&
           blogs.map((blog, index) => {
             return blog.categories.length > 0 ? (
-              <Col key={index} xs={11} md={5} lg={4} className="mt-4 mt-md-0">
+              <Col key={index} xs={11} lg={6} className="mt-4 mt-md-0">
                 <Card className="text-dark">
                   <CardImg
                     top

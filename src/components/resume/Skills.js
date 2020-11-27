@@ -14,14 +14,14 @@ const Skills = () => {
     { name: "mongodb", value: 90 },
     { name: "mongoose", value: 85 },
   ];
-  // const otherTools = [
-  //   { name: "vs code" },
-  //   { name: "chrome dev tools" },
-  //   { name: "firebase" },
-  //   { name: "heroku" },
-  //   { name: "git" },
-  //   { name: "netlify" },
-  // ];
+  const otherTools = [
+    { name: "vs code" },
+    { name: "chrome dev tools" },
+    { name: "firebase" },
+    { name: "heroku" },
+    { name: "git" },
+    { name: "netlify" },
+  ];
   const otherSkills = [
     {
       name: "leadership",
@@ -29,17 +29,14 @@ const Skills = () => {
     },
   ];
   return (
-    <Col xs={10} lg={5} className="mt-3 pl-lg-4">
-      <h2 className="pb-4">
-        <span className="text-warning heading-border">Skills</span>
-      </h2>
+    <Col xs={11} className="mt-1">
       <div>
-        <h5 className="font-weight-bolder mt-4">Front End Technologies: </h5>
+        <h5 className="font-weight-bolder mt-2">Front End Technologies: </h5>
         {frontEnd.map((fe) => {
           return (
             <div className="mt-1">
               <span className="text-uppercase">{fe.name}</span>
-              <Progress striped color="success" value={fe.value}>
+              <Progress color="success" value={fe.value}>
                 {fe.value}%
               </Progress>
             </div>
@@ -53,7 +50,7 @@ const Skills = () => {
           return (
             <div className="mt-1">
               <span className="text-uppercase">{be.name}</span>
-              <Progress striped color="success" value={be.value}>
+              <Progress color="success" value={be.value}>
                 {be.value}%
               </Progress>
             </div>

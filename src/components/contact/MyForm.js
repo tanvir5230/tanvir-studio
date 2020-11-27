@@ -48,7 +48,7 @@ const MyForm = () => {
   }, [success, failed]);
 
   return (
-    <Col xs={11} lg={6} className="px-lg-5 mt-5 mt-lg-0">
+    <Col xs={11} className="px-lg-5 mt-5 mt-lg-0">
       <h3 className="my-3">
         <span
           className="border-bottom border-warning"

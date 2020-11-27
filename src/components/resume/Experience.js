@@ -61,14 +61,11 @@ const Experience = () => {
     },
   ];
   return (
-    <Col xs={10} lg={5} className="mt-3 experience">
-      <h2 className="text-warning pb-4">
-        <span className="heading-border">Experience</span>
-      </h2>
+    <Col xs={11} className="mt-1">
       {experiences.map((experience) => {
         return (
           <>
-            <div className="mt-4">
+            <div className="mt-1">
               <h4>{experience.title}</h4>
               <h5>Features</h5>
               <ul>

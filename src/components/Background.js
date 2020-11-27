@@ -1,8 +1,16 @@
 import React from "react";
-import ParticleBg from "../components2/home/ParticleBg";
+import ParticleBg from "./Home/ParticleBg";
 import { Col, Container, Row } from "reactstrap";
+import { Redirect, Route, Switch } from "react-router-dom";
+
+import Home from "./Home/Home";
 import MyNavbar from "./navigation/MyNavbar";
-import { Route, Switch } from "react-router-dom";
+import About from "./about/About";
+import Resume from "./resume/Resume";
+import Portfolio from "./portfolio/Portfolio";
+import Blog from "./blog/Blog";
+import Contact from "./contact/Contact";
+
 const Background = () => {
   return (
     <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
@@ -33,15 +41,47 @@ const Background = () => {
           >
             <Row className="h-100 w-100 m-0 p-0">
               <Col
-                className="h-100 p-0 m-0"
+                className="m-0 p-0"
                 xs={2}
-                style={{ backgroundColor: "#f6f5f6" }}
+                style={{ backgroundColor: "#f6f5f6", height: "600px" }}
               >
                 <MyNavbar />
               </Col>
-              <Col className="h-100" xs={10}>
+              <Col
+                className="p-0 m-0"
+                xs={10}
+                style={{
+                  height: "600px",
+                  overflowY: "auto",
+                  msOverflowY: "auto",
+                  overflowX: "hidden",
+                  msOverflowX: "hidden",
+                }}
+              >
                 <Switch>
-                  <Route path="/"></Route>
+                  <Route path="/about">
+                    <div className="animate_animate animate__fadeInLeft">
+                      <About />
+                    </div>
+                  </Route>
+                  <Route path="/resume">
+                    <div className="animate_animate animate__fadeInLeft">
+                      <Resume />
+                    </div>
+                  </Route>
+                  <Route path="/portfolio">
+                    <Portfolio />
+                  </Route>
+                  <Route path="/blog">
+                    <Blog />
+                  </Route>
+                  <Route path="/contact">
+                    <Contact />
+                  </Route>
+                  <Route path="/home">
+                    <Home />
+                  </Route>
+                  <Redirect to="/home" />
                 </Switch>
               </Col>
             </Row>

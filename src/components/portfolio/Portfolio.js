@@ -1,14 +1,12 @@
 import React from "react";
 import { Card, CardBody, CardImg, Col, Container, Row } from "reactstrap";
-import Topbar from "../navigation/Topbar";
-import Heading from "../shared/Heading";
 import doctors_portal from "../../photo/projects/doctors-portal.png";
 import creative_agency from "../../photo/projects/creative-agency.png";
 import hot_onion from "../../photo/projects/hot-onion.png";
 import volunteer_network from "../../photo/projects/volunteer-network.png";
 import hot_gadgets from "../../photo/projects/hot_gadgets.PNG";
 import "./portfolio.css";
-//ok
+
 const Portfolio = () => {
   const projects = [
     {
@@ -50,15 +48,13 @@ const Portfolio = () => {
   return (
     <Container
       fluid
-      className="dark-bg h-100 c-scrollbar"
+      className="bg-white h-100"
       style={{ overflowX: "hidden", overflowY: "auto" }}
     >
-      <Topbar />
-      <Heading title="Portfolio" icon="briefcase" />
       <Row className="flex-wrap justify-content-center justify-content-md-start align-items-end p-3">
         {projects.map((project) => {
           return (
-            <Col xs={10} sm={6} lg={4} xl={3} className="mt-4">
+            <Col xs={10} sm={6} className="mt-4">
               <Card className="shadow project-card">
                 <div
                   className="overflow-hidden"
@@ -75,7 +71,7 @@ const Portfolio = () => {
                         target="_blank"
                         rel="noreferrer"
                         href={project.liveSite}
-                        className="btn btn-outline-warning rounded-pill px-4 font-weight-bold"
+                        className="btn btn-outline-warning rounded-pill font-weight-bold"
                       >
                         Live site
                       </a>
@@ -83,7 +79,7 @@ const Portfolio = () => {
                         target="_blank"
                         rel="noreferrer"
                         href={project.github}
-                        className="btn btn-outline-primary ml-3 rounded-pill px-4 font-weight-bold"
+                        className="btn btn-outline-primary ml-3 rounded-pill font-weight-bold"
                       >
                         github
                       </a>

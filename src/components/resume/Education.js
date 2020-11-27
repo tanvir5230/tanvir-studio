@@ -19,7 +19,7 @@ const Education = () => {
     },
   ];
   return (
-    <Col xs={10} lg={5} className="mt-3">
+    <Col xs={10} className="mt-3">
       <h2 className="mb-5">
         <span className="heading-border text-warning">Education</span>
       </h2>
