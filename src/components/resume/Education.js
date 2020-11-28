@@ -20,9 +20,9 @@ const Education = () => {
   ];
   return (
     <Col xs={10} className="mt-3">
-      <h2 className="mb-5">
-        <span className="heading-border text-warning">Education</span>
-      </h2>
+      <h4 className="mb-5  text-center">
+        <span className="heading-border c-text">Education</span>
+      </h4>
       {education.map((edu) => {
         return (
           <div>

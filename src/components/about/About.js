@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-import Topbar from "../navigation/Topbar";
 import "./about.css";
 import { Info } from "./Info";
 import { Description } from "./Description";
@@ -16,12 +15,24 @@ const About = () => {
     { title: "phone", text: "+8801521407975" },
   ];
   return (
-    <Container fluid className="m-0 p-0 bg-white">
+    <Container
+      fluid
+      className="m-0 p-0 bg-white"
+      style={{ height: "600px", overflowY: "auto", overflowX: "hidden" }}
+    >
       <Row className="justify-content-center">
-        <Col className="py-4" xs={11}>
+        <Col className="p-0">
+          <h3
+            className="text-center border-bottom text-uppercase py-2"
+            style={{ fontFamily: "cursive" }}
+          >
+            about me
+          </h3>
+        </Col>
+        <Col className="pt-4" xs={11}>
           <Description />
         </Col>
-        <Col xs={11} className="py-4">
+        <Col xs={11} className="pt-4">
           <Info info={info} />
         </Col>
       </Row>

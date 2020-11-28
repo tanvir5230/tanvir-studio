@@ -1,7 +1,6 @@
 .btn:hover {
-  transition: all 0.6s;
+  transition: all 0.6s ease-in-out;
 }
-.project-card:hover {
-  transform: translateY(-10px);
-  transition: transform 0.6s;
+.project:hover {
+  opacity: 0.8 !important;
 }

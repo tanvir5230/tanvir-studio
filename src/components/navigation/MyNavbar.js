@@ -24,7 +24,8 @@ const MyNavbar = () => {
           >
             <NavLink
               style={{ color: "#838383" }}
-              activeClassName="rounded-circle border"
+              activeClassName="rounded-circle p-2"
+              activeStyle={{ border: "5px solid #ddd" }}
               to="/home"
             >
               <img src={item.icon} alt="" width="30" height="30" />
@@ -37,7 +38,7 @@ const MyNavbar = () => {
           >
             <NavLink
               style={{ color: "#838383" }}
-              activeStyle={{ fontWeight: "bold" }}
+              activeClassName="text-primary font-weight-bold"
               to={`/${item.name}`}
             >
               <span

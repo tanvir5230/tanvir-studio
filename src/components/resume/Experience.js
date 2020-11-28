@@ -6,9 +6,13 @@ const Experience = () => {
     {
       title: "Doctor's portal",
       features: [
-        "The patients can give appointment and those will be saved in our database.",
+        "Single page application.",
+        "clients can give appointment by choosing a specific date and doctor.",
+        "doctors can check which petients gave appointments on which date.",
+        "doctors can approve and cancel appointment.",
+        "The petients don't have access to the doctors panel.",
+        "this is a responsive website.",
       ],
-      technologiesUsed: "react,reactstrap",
       githubRepo: {
         client: "https://github.com/tanvir5230/doctor-s-portal-client",
         server: "https://github.com/tanvir5230/doctor-s-portal-server",
@@ -16,7 +20,7 @@ const Experience = () => {
       liveSite: "https://doctors-portal-t.web.app/",
     },
     {
-      title: "Doctor's portal",
+      title: "Creative Agency",
       features: [
         "Responsive and Single page web application",
         "Creative agency group can take client's order through this site",
@@ -26,12 +30,6 @@ const Experience = () => {
         "Only admin can add,remove and modify service.",
         "clients can give feedback.",
         "clients have no access to admin section.",
-      ],
-      technologiesUsed: [
-        "React",
-        "reactstrap",
-        "react-router",
-        "firebase(for authentication && deployment of client side)",
       ],
       githubRepo: {
         client: "https://github.com/tanvir5230/creative-agency-client",
@@ -47,12 +45,7 @@ const Experience = () => {
         "add, delete and modify the events(only for admin)",
         "can delete user(only for admin)",
       ],
-      technologiesUsed: [
-        "node js",
-        "express js",
-        "mongodb",
-        "heroku(to deploy the server)",
-      ],
+
       githubRepo: {
         client: "https://github.com/tanvir5230/volunteer-network-client",
         server: "https://github.com/tanvir5230/volunteer-network-server",
@@ -62,20 +55,21 @@ const Experience = () => {
   ];
   return (
     <Col xs={11} className="mt-1">
+      <h4 className="mb-5 text-center">
+        <span className="heading-border c-text">Education</span>
+      </h4>
       {experiences.map((experience) => {
         return (
           <>
             <div className="mt-1">
               <h4>{experience.title}</h4>
-              <h5>Features</h5>
+              <h5>Features:</h5>
               <ul>
                 {experience.features.map((feature) => {
                   return <li>{feature}</li>;
                 })}
               </ul>
-              <h5>
-                technologies Used: <span>{experience.technologiesUsed}</span>
-              </h5>
+
               <div className="d-flex">
                 <h5 className="pr-2">Github Repo: </h5>
                 <a href={experience.githubRepo.client}>client</a>

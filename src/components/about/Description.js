@@ -2,7 +2,7 @@ import React from "react";
 export const Description = () => {
   return (
     <>
-      <h3>MERN Stack Developer</h3>
+      <h4>MERN Stack Developer</h4>
       <p className="py-3">
         A Software Engineer - Full Stack Developer with several years of
         experience, seeking a challenging career opportunity to attain and

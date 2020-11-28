@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.css";
-import myPhoto from "../../photo/user.jpg";
 import ReactTypingEffect from "react-typing-effect";
 
 const Home = () => {
@@ -14,10 +13,10 @@ const Home = () => {
     { link: "https://twitter.com/ibn_touhid", icon: "twitter" },
   ];
   return (
-    <div className="bg-white home-bg h-100" style={{ maxWidth: "440px" }}>
-      {/* <div className="bg-danger">
-        <img src={myPhoto} className="img-fluid" alt="" />
-      </div> */}
+    <div
+      className="bg-white home-bg"
+      style={{ maxWidth: "440px", height: "600px" }}
+    >
       <div
         className="d-flex justify-content-center align-items-center"
         style={{ height: "240px", transform: "translateY(340px)" }}
@@ -31,10 +30,9 @@ const Home = () => {
               Tanvir Ibn Touhid
             </h4>
             <h5>
-              I am a <br />
               <ReactTypingEffect
                 text={["front end developer", "MERN stack developer"]}
-                style={{ color: "blueviolet", fontFamily: "fantasy" }}
+                style={{ color: "#107896", fontFamily: "fantasy" }}
                 speed={200}
                 eraseSpeed={100}
                 eraseDelay={100}
@@ -60,7 +58,7 @@ const Home = () => {
               target="_blank"
               rel="noreferrer"
               href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
-              className="btn btn-warning font-weight-bold text-capitalize rounded-pill py-3 px-4"
+              className="btn btn-primary font-weight-bold text-capitalize rounded-pill py-3 px-4"
             >
               <span className="fa fa-download mr-2"></span>
               <span className="text-white">download resume</span>

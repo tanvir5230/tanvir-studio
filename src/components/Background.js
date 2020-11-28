@@ -1,7 +1,7 @@
 import React from "react";
 import ParticleBg from "./Home/ParticleBg";
 import { Col, Container, Row } from "reactstrap";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 
 import Home from "./Home/Home";
 import MyNavbar from "./navigation/MyNavbar";
@@ -10,8 +10,11 @@ import Resume from "./resume/Resume";
 import Portfolio from "./portfolio/Portfolio";
 import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Background = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
       <div className="w-100 h-100 p-0 m-0 overflow-hidden position-relative">
@@ -52,37 +55,38 @@ const Background = () => {
                 xs={10}
                 style={{
                   height: "600px",
-                  overflowY: "auto",
-                  msOverflowY: "auto",
-                  overflowX: "hidden",
-                  msOverflowX: "hidden",
+                  overflow: "hidden",
                 }}
               >
-                <Switch>
-                  <Route path="/about">
-                    <div className="animate_animate animate__fadeInLeft">
-                      <About />
-                    </div>
-                  </Route>
-                  <Route path="/resume">
-                    <div className="animate_animate animate__fadeInLeft">
-                      <Resume />
-                    </div>
-                  </Route>
-                  <Route path="/portfolio">
-                    <Portfolio />
-                  </Route>
-                  <Route path="/blog">
-                    <Blog />
-                  </Route>
-                  <Route path="/contact">
-                    <Contact />
-                  </Route>
-                  <Route path="/home">
-                    <Home />
-                  </Route>
-                  <Redirect to="/home" />
-                </Switch>
+                <TransitionGroup>
+                  <CSSTransition
+                    key={location.key}
+                    classNames="fade"
+                    timeout={600}
+                  >
+                    <Switch location={location}>
+                      <Route path="/about">
+                        <About />
+                      </Route>
+                      <Route path="/resume">
+                        <Resume />
+                      </Route>
+                      <Route path="/portfolio">
+                        <Portfolio />
+                      </Route>
+                      <Route path="/blog">
+                        <Blog />
+                      </Route>
+                      <Route path="/contact">
+                        <Contact />
+                      </Route>
+                      <Route path="/home">
+                        <Home />
+                      </Route>
+                      <Redirect to="/home" />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
               </Col>
             </Row>
           </Col>

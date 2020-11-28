@@ -1,0 +1,4 @@
+.blog:hover {
+  transform: translateY(-10px);
+  transition: transform 600ms ease-in-out;
+}

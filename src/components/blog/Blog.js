@@ -10,6 +10,7 @@ import {
   Container,
   Row,
 } from "reactstrap";
+import "./blog.css";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState(null);
@@ -23,7 +24,6 @@ const Blog = () => {
       .then((data) => {
         if (data) {
           setBlogs(data.items);
-          console.log(data.items);
         }
       })
       .catch((err) => {
@@ -31,18 +31,26 @@ const Blog = () => {
       });
   }, []);
   return (
-    <Container fluid className="bg-white h-100 overflow-auto">
+    <Container
+      fluid
+      className="bg-white overflow-auto"
+      style={{ height: "600px", overflowX: "hidden", overflowY: "auto" }}
+    >
       <Row className="justify-content-center justify-content-md-start align-items-baseline p-3">
         {blogs === null && (
-          <p className="text-center">
-            <span className="fa fa-spinner fa-pulse fa-2x"></span>
-          </p>
+          <Col
+            xs={12}
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "500px" }}
+          >
+            <span className="text-primary fa fa-spinner fa-pulse fa-2x"></span>
+          </Col>
         )}
         {blogs &&
           blogs.map((blog, index) => {
             return blog.categories.length > 0 ? (
               <Col key={index} xs={11} lg={6} className="mt-4 mt-md-0">
-                <Card className="text-dark">
+                <Card className="text-dark blog">
                   <CardImg
                     top
                     width="100%"

@@ -1,22 +1,29 @@
 import React from "react";
-import { Container, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import MyForm from "./MyForm";
-import MyInfo from "./MyInfo";
 
 const Contact = () => {
   return (
     <Container
       fluid
-      className="bg-white h-100"
+      className="bg-white p-0 m-0"
       style={{
+        height: "600px",
         boxSizing: "border-box",
         overflowX: "hidden",
         overflowY: "auto",
       }}
     >
-      <Row className="justify-content-center my-3">
+      <Row className="justify-content-center p-0 m-0">
+        <Col className="p-0">
+          <h3
+            className="text-center border-bottom text-uppercase py-2"
+            style={{ fontFamily: "cursive" }}
+          >
+            contact me
+          </h3>
+        </Col>
         <MyForm />
-        <MyInfo />
       </Row>
     </Container>
   );

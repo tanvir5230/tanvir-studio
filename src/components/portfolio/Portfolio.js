@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, Col, Container, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import doctors_portal from "../../photo/projects/doctors-portal.png";
 import creative_agency from "../../photo/projects/creative-agency.png";
 import hot_onion from "../../photo/projects/hot-onion.png";
@@ -48,45 +48,61 @@ const Portfolio = () => {
   return (
     <Container
       fluid
-      className="bg-white h-100"
-      style={{ overflowX: "hidden", overflowY: "auto" }}
+      className="p-0 m-0"
+      style={{ height: "600px", overflowX: "hidden", overflowY: "auto" }}
     >
-      <Row className="flex-wrap justify-content-center justify-content-md-start align-items-end p-3">
+      <Row className="p-0 m-0 bg-white justify-content-start">
+        <Col xs={12} className="p-0">
+          <h3
+            className="text-center border-bottom text-uppercase py-2"
+            style={{ fontFamily: "cursive" }}
+          >
+            Portfolio
+          </h3>
+        </Col>
         {projects.map((project) => {
           return (
-            <Col xs={10} sm={6} className="mt-4">
-              <Card className="shadow project-card">
-                <div
-                  className="overflow-hidden"
-                  style={{ height: "160px", width: "100%" }}
-                >
-                  <CardImg top src={project.image} className="rounded" />
+            <Col xs={6} className="mt-4 position-relative">
+              <img
+                src={project.image}
+                width="100%"
+                height="250"
+                alt={project.title}
+                className="rounded border shadow"
+              />
+              <div
+                className="text-center text-white d-flex flex-column justify-content-center align-items-center overflow-hidden project"
+                style={{
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                  width: "100%",
+                  height: "250px",
+                  opacity: "0",
+                  backgroundColor: "#107896",
+                }}
+              >
+                <h5>{project.title}</h5>
+                <p>{project.shortDes}</p>
+                <div className="d-flex justify-content-center">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={project.liveSite}
+                    className="btn-sm btn-primary rounded-pill border"
+                  >
+                    Live site
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={project.github}
+                    className="btn-sm btn-primary rounded-pill border ml-2"
+                  >
+                    github
+                  </a>
                 </div>
-                <CardBody>
-                  <div className="text-capitalize">
-                    <h5>{project.title}</h5>
-                    <p>{project.shortDes}</p>
-                    <div className="d-flex justify-content-start">
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href={project.liveSite}
-                        className="btn btn-outline-warning rounded-pill font-weight-bold"
-                      >
-                        Live site
-                      </a>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href={project.github}
-                        className="btn btn-outline-primary ml-3 rounded-pill font-weight-bold"
-                      >
-                        github
-                      </a>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
+              </div>
             </Col>
           );
         })}

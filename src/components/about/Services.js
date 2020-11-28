@@ -25,26 +25,26 @@ const Services = () => {
   return (
     <>
       <Col xs={12} className="py-5">
-        <h2 className="text-center">
+        <h4 className="text-center">
           <span className="m-auto heading-border position-relative">
             Services
           </span>
-        </h2>
+        </h4>
       </Col>
       <Col xs={12}>
         <Row className="justify-content-center">
           {services.map((service) => {
             return (
               <Col xs={10} md={4} className="mt-4">
-                <div className="d-flex flex-column align-items-center text-center px-4">
+                <div className="d-flex flex-column align-items-center text-center">
                   <span
-                    className={`fa fa-${service.icon} text-warning`}
+                    className={`fa fa-${service.icon} c-text`}
                     style={{ fontSize: "5rem" }}
                   ></span>
                   <span className="text-uppercase font-weight-bold py-3">
                     {service.title}
                   </span>
-                  <p className="py-1">{service.description}</p>
+                  <p className="p-1">{service.description}</p>
                 </div>
               </Col>
             );

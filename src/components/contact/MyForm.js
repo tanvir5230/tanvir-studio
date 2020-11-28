@@ -48,16 +48,20 @@ const MyForm = () => {
   }, [success, failed]);
 
   return (
-    <Col xs={11} className="px-lg-5 mt-5 mt-lg-0">
-      <h3 className="my-3">
+    <Col xs={11}>
+      <h4 className="mt-3 mb-5">
         <span
-          className="border-bottom border-warning"
-          style={{ borderWidth: "5px" }}
+          style={{
+            borderBottom: "5px solid #107896",
+            borderRadius: "50px 20px",
+          }}
         >
           Ho
         </span>
-        <span className="border-bottom">w Can I Help You?</span>
-      </h3>
+        <span style={{ borderBottom: "5px solid #ddd" }}>
+          w Can I Help You?
+        </span>
+      </h4>
       <form onSubmit={sendEmail}>
         <input type="hidden" name="contact_form" />
         <input
@@ -85,7 +89,7 @@ const MyForm = () => {
           ref={message}
           required
         ></textarea>
-        <button className="btn btn-outline-warning rounded-pill mt-3 form-control">
+        <button className="btn btn-outline-info mt-3 form-control">
           Send Message
         </button>
       </form>
