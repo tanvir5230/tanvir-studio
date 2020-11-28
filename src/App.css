@@ -91,4 +91,8 @@
     height: auto !important;
     border-radius: 10px;
   }
+  .home-bg {
+    max-width: 100% !important;
+    border-radius: 10px;
+  }
 }

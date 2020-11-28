@@ -43,7 +43,7 @@ const Background = () => {
             lg={8}
             style={{ height: "80vh" }}
           >
-            <Row className="h-100 w-100 m-0 p-0">
+            <Row className="h-100 w-100 m-0 p-0 justify-content-center align-items-center">
               <Col
                 className="m-0 p-0 rounded-lg"
                 xs={2}
@@ -91,7 +91,9 @@ const Background = () => {
               </Col>
             </Row>
           </Col>
-          {/* desktop view */}
+          {/* desktop view  end*/}
+
+          {/* mobile view start */}
 
           <Col xs={11} className="d-md-none p-0 m-0 overflow-auto">
             <div className="mt-3">
@@ -110,6 +112,8 @@ const Background = () => {
               <Contact />
             </div>
           </Col>
+
+          {/* mobile view end */}
         </Row>
       </Container>
     </div>

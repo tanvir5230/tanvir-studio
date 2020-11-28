@@ -41,7 +41,7 @@ const Home = () => {
               />
             </h5>
             <div className="my-3">
-              {social.map((item,i) => {
+              {social.map((item, i) => {
                 return (
                   <a
                     key={i}
