@@ -94,5 +94,6 @@
   .home-bg {
     max-width: 100% !important;
     border-radius: 10px;
+    background-size: 100% 338px !important;
   }
 }
