@@ -13,8 +13,8 @@ const Hobby = () => {
         <span className="heading-border c-text">Hobbies</span>
       </h4>
       <ul>
-        {hobbies.map((hobby) => {
-          return <li className="mt-3">{hobby}</li>;
+        {hobbies.map((hobby,i) => {
+          return <li key={i} className="mt-3">{hobby}</li>;
         })}
       </ul>
     </Col>

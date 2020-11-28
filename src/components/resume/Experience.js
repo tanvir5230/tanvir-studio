@@ -58,15 +58,15 @@ const Experience = () => {
       <h4 className="mb-5 text-center">
         <span className="heading-border c-text">Education</span>
       </h4>
-      {experiences.map((experience) => {
+      {experiences.map((experience, i) => {
         return (
           <>
-            <div className="mt-1">
+            <div key={i} className="mt-1">
               <h4>{experience.title}</h4>
               <h5>Features:</h5>
               <ul>
-                {experience.features.map((feature) => {
-                  return <li>{feature}</li>;
+                {experience.features.map((feature, i2) => {
+                  return <li key={i2}>{feature}</li>;
                 })}
               </ul>
 

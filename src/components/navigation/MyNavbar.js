@@ -19,6 +19,7 @@ const MyNavbar = () => {
       {navUrl.map((item, ind) => {
         return item.name === null ? (
           <NavItem
+            key={ind}
             className="border-bottom d-flex justify-content-center align-items-center"
             style={{ height: "100px" }}
           >
@@ -33,6 +34,7 @@ const MyNavbar = () => {
           </NavItem>
         ) : (
           <NavItem
+            key={ind}
             className={`${
               navUrl.length - 1 === ind ? "" : "border-bottom"
             } d-flex justify-content-center align-items-center`}

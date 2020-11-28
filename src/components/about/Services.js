@@ -33,9 +33,9 @@ const Services = () => {
       </Col>
       <Col xs={12}>
         <Row className="justify-content-center">
-          {services.map((service) => {
+          {services.map((service, i) => {
             return (
-              <Col xs={10} md={4} className="mt-4">
+              <Col key={i} xs={10} md={4} className="mt-4">
                 <div className="d-flex flex-column align-items-center text-center">
                   <span
                     className={`fa fa-${service.icon} c-text`}

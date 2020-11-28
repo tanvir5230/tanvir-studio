@@ -41,9 +41,10 @@ const Home = () => {
               />
             </h5>
             <div className="my-3">
-              {social.map((item) => {
+              {social.map((item,i) => {
                 return (
                   <a
+                    key={i}
                     href={item.link}
                     target="_blank"
                     rel="noreferrer"

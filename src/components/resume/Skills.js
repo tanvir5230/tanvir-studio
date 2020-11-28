@@ -39,9 +39,9 @@ const Skills = () => {
       </h4>
       <div>
         <h5 className="font-weight-bolder mt-2">Front End Technologies: </h5>
-        {frontEnd.map((fe) => {
+        {frontEnd.map((fe, i) => {
           return (
-            <div className="mt-1 p-0">
+            <div key={i} className="mt-1 p-0">
               <span className="text-uppercase">{fe.name}</span>
               <Progress
                 color="success"
@@ -57,9 +57,9 @@ const Skills = () => {
       <hr />
       <div>
         <h5 className="font-weight-bolder my-3">Back End Technologies: </h5>
-        {backend.map((be) => {
+        {backend.map((be, i) => {
           return (
-            <div className="mt-1">
+            <div key={i} className="mt-1">
               <span className="text-uppercase">{be.name}</span>
               <Progress
                 color="success"
@@ -76,16 +76,20 @@ const Skills = () => {
       <div>
         <h5 className="font-weight-bolder my-3">Other Tools: </h5>
         <ul className="mt-1">
-          {otherTools.map((ot) => {
-            return <li className="text-uppercase">{ot.name}</li>;
+          {otherTools.map((ot, i) => {
+            return (
+              <li key={i} className="text-uppercase">
+                {ot.name}
+              </li>
+            );
           })}
         </ul>
       </div>
       <div>
         <h5 className="font-weight-bolder my-3">Other Skills: </h5>
-        {otherSkills.map((os) => {
+        {otherSkills.map((os, i) => {
           return (
-            <dl className="mt-1">
+            <dl key={i} className="mt-1">
               <dt className="text-uppercase">{os.name}</dt>
               <dd>{os.experience}</dd>
             </dl>

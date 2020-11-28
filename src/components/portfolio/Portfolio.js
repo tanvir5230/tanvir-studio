@@ -60,9 +60,9 @@ const Portfolio = () => {
             Portfolio
           </h3>
         </Col>
-        {projects.map((project) => {
+        {projects.map((project,i) => {
           return (
-            <Col xs={6} className="mt-4 position-relative">
+            <Col key={i} xs={6} className="mt-4 position-relative">
               <img
                 src={project.image}
                 width="100%"

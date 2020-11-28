@@ -4,9 +4,9 @@ export const Info = ({ info }) => {
     <>
       <h4>Personal Information</h4>
       <div className="py-3">
-        {info.map((item) => {
+        {info.map((item, i) => {
           return (
-            <p className="m-0 pb-1">
+            <p key={i} className="m-0 pb-1">
               <span
                 className="text-right mr-2 font-weight-bold"
                 style={{ width: "100px" }}

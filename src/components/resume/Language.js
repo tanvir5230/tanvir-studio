@@ -11,9 +11,9 @@ const Language = () => {
       <h4 className="mb-5  text-center">
         <span className="heading-border c-text">Language</span>
       </h4>
-      {language.map((lng) => {
+      {language.map((lng,i) => {
         return (
-          <div className="border-bottom my-4">
+          <div key={i} className="border-bottom my-4">
             <p className="p-0 m-0 font-weight-bolder text-uppercase">
               {lng.name}
             </p>

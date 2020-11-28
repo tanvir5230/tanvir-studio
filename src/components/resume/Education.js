@@ -23,9 +23,9 @@ const Education = () => {
       <h4 className="mb-5  text-center">
         <span className="heading-border c-text">Education</span>
       </h4>
-      {education.map((edu) => {
+      {education.map((edu,i) => {
         return (
-          <div>
+          <div key={i}>
             <h5>
               <span className="font-weight-bold">{edu.degree}</span> in{" "}
               <span className="font-weight-bold">{edu.department},</span>
