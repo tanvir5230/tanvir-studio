@@ -14,7 +14,7 @@ const Contact = () => {
         overflowY: "auto",
       }}
     >
-      <Row className="justify-content-center p-0 m-0">
+      <Row className="justify-content-center px-0 py-3 m-0">
         <Col className="p-0">
           <h3
             className="text-center border-bottom text-uppercase py-2"

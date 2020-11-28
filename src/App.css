@@ -85,3 +85,10 @@
 .progress {
   height: auto !important;
 }
+
+@media only screen and (max-width: 576px) {
+  .container-fluid {
+    height: auto !important;
+    border-radius: 10px;
+  }
+}

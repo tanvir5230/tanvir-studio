@@ -16,7 +16,7 @@ const MyNavbar = () => {
 
   return (
     <Nav vertical className="text-center h-100">
-      {navUrl.map((item) => {
+      {navUrl.map((item, ind) => {
         return item.name === null ? (
           <NavItem
             className="border-bottom d-flex justify-content-center align-items-center"
@@ -33,7 +33,9 @@ const MyNavbar = () => {
           </NavItem>
         ) : (
           <NavItem
-            className="border-bottom d-flex justify-content-center align-items-center"
+            className={`${
+              navUrl.length - 1 === ind ? "" : "border-bottom"
+            } d-flex justify-content-center align-items-center`}
             style={{ height: "100px" }}
           >
             <NavLink

@@ -25,7 +25,7 @@ const Background = () => {
       </div>
 
       <Container
-        className="h-100"
+        className="h-100 overflow-auto"
         style={{
           position: "absolute",
           left: "0",
@@ -34,9 +34,10 @@ const Background = () => {
           zIndex: "100",
         }}
       >
-        <Row className="h-100 justify-content-center align-items-center p-0">
+        <Row className="h-100 justify-content-center align-items-center p-0 rounded">
+          {/* desktop view */}
           <Col
-            className="p-0"
+            className="p-0 d-none d-md-block"
             xs={12}
             md={10}
             lg={8}
@@ -44,14 +45,14 @@ const Background = () => {
           >
             <Row className="h-100 w-100 m-0 p-0">
               <Col
-                className="m-0 p-0"
+                className="m-0 p-0 rounded-lg"
                 xs={2}
                 style={{ backgroundColor: "#f6f5f6", height: "600px" }}
               >
                 <MyNavbar />
               </Col>
               <Col
-                className="p-0 m-0"
+                className="p-0 m-0 rounded-lg"
                 xs={10}
                 style={{
                   height: "600px",
@@ -89,6 +90,25 @@ const Background = () => {
                 </TransitionGroup>
               </Col>
             </Row>
+          </Col>
+          {/* desktop view */}
+
+          <Col xs={11} className="d-md-none p-0 m-0 overflow-auto">
+            <div className="mt-3">
+              <Home />
+            </div>
+            <div className="my-3">
+              <About />
+            </div>
+            <div className="my-3">
+              <Resume />
+            </div>
+            <div className="mt-3">
+              <Blog />
+            </div>
+            <div className="my-3">
+              <Contact />
+            </div>
           </Col>
         </Row>
       </Container>

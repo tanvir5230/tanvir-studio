@@ -37,6 +37,14 @@ const Blog = () => {
       style={{ height: "600px", overflowX: "hidden", overflowY: "auto" }}
     >
       <Row className="justify-content-center justify-content-md-start align-items-baseline p-3">
+        <Col xs={12} className="p-0">
+          <h3
+            className="text-center border-bottom text-uppercase py-2"
+            style={{ fontFamily: "cursive" }}
+          >
+            blog
+          </h3>
+        </Col>
         {blogs === null && (
           <Col
             xs={12}
