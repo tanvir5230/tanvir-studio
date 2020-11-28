@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ParticleBg from "./Home/ParticleBg";
 import { Col, Container, Row } from "reactstrap";
 import { Redirect, Route, Switch, useLocation } from "react-router-dom";
@@ -11,10 +11,13 @@ import Portfolio from "./portfolio/Portfolio";
 import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import ScrollToTop from "./ScrollToTop";
+import SmallNav from "./navigation/SmallNav";
 
 const Background = () => {
   const location = useLocation();
-  console.log(location);
+  const [showScroll, setShowScroll] = useState(false);
+
   return (
     <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
       <div className="w-100 h-100 p-0 m-0 overflow-hidden position-relative">
@@ -23,7 +26,20 @@ const Background = () => {
           <ParticleBg />
         </div>
       </div>
-
+      <ul
+        style={{
+          position: "fixed",
+          bottom: "10px",
+          right: "10px",
+          zIndex: "1000",
+          listStyle: "none",
+        }}
+      >
+        <li>
+          <SmallNav />
+        </li>
+        <li>{showScroll && <ScrollToTop />}</li>
+      </ul>
       <Container
         className="h-100 overflow-auto"
         style={{
@@ -32,6 +48,13 @@ const Background = () => {
           right: "0",
           top: "0",
           zIndex: "100",
+        }}
+        onScroll={(e) => {
+          if (e.target.scrollTop > 600) {
+            setShowScroll(true);
+          } else {
+            setShowScroll(false);
+          }
         }}
       >
         <Row className="h-100 justify-content-center align-items-center p-0 rounded">
@@ -96,19 +119,19 @@ const Background = () => {
           {/* mobile view start */}
 
           <Col xs={11} className="d-md-none p-0 m-0 overflow-auto">
-            <div className="mt-3">
+            <div className="mt-3" id="home">
               <Home />
             </div>
-            <div className="my-3">
+            <div className="my-3" id="about">
               <About />
             </div>
-            <div className="my-3">
+            <div className="my-3" id="resume">
               <Resume />
             </div>
-            <div className="mt-3">
+            <div className="mt-3" id="blog">
               <Blog />
             </div>
-            <div className="my-3">
+            <div className="my-3" id="contact">
               <Contact />
             </div>
           </Col>
