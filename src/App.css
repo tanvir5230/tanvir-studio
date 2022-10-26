@@ -53,15 +53,21 @@
 }
 
 /* for header */
-@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .row h4 {
-  font-family: "Sansita Swashed", cursive;
+  font-family: "open sans", cursive;
+  font-weight: bold
+}
+
+h3{
+  font-family: "poppins";
+  font-weight: bold;
 }
 
 /* for description type writing */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
 .row {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   line-height: 25px;
 }

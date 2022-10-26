@@ -19,14 +19,13 @@ const Resume = () => {
         <Col className="p-0">
           <h3
             className="text-center border-bottom text-uppercase py-2"
-            style={{ fontFamily: "cursive" }}
           >
             resume
           </h3>
         </Col>
+        <Education />
         <Experience />
         <Skills />
-        <Education />
         <Language />
         <Certificate />
         <Hobby />

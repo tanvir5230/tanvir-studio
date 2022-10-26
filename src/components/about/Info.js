@@ -1,8 +1,10 @@
 import React from "react";
+import { personalInfoHeading } from "../../info/about";
+import { resumeLink } from "../../info/resume";
 export const Info = ({ info }) => {
   return (
     <>
-      <h4>Personal Information</h4>
+      <h4>{personalInfoHeading}</h4>
       <div className="py-3">
         {info.map((item, i) => {
           return (
@@ -21,7 +23,7 @@ export const Info = ({ info }) => {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://drive.google.com/file/d/1CV4vkOsW461HV9o3ksOTLQvI2kx-hrtA/view?usp=sharing"
+        href={`${resumeLink}`}
         className="btn btn-outline-info font-weight-bold text-capitalize"
       >
         <span className="fa fa-download mr-2"></span>download resume

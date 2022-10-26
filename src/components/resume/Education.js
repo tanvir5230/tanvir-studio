@@ -1,27 +1,13 @@
 import React from "react";
 import { Col } from "reactstrap";
+import { educationHeading, educationList } from "../../info/resume";
 
 const Education = () => {
-  const education = [
-    {
-      degree: "Bsc",
-      department: "Electrical & Electronic Engineering",
-      institute: "Chittagong University of Engineering & Technology",
-      start: "feb,2017",
-      end: "current",
-    },
-    {
-      degree: "Hsc",
-      department: "Science",
-      institute: "Notre Dame College, Dhaka",
-      start: "june,2014",
-      end: "june,2016",
-    },
-  ];
+  const education = educationList;
   return (
     <Col xs={10} className="mt-3">
       <h4 className="mb-5  text-center">
-        <span className="heading-border c-text">Education</span>
+        <span className="heading-border c-text">{educationHeading}</span>
       </h4>
       {education.map((edu,i) => {
         return (
@@ -34,7 +20,8 @@ const Education = () => {
             <div className="text-black-50">
               <span>{edu.start}</span>
               <span>-</span>
-              <span>{edu.end}</span>
+              <span>{edu.end}</span><br/>
+              {edu.degree === "Bsc" ? <><span>CGPA: </span><span>{edu.CGPA}</span></>:<><span>GPA: </span><span>{edu.GPA}</span></>}
             </div>
           </div>
         );

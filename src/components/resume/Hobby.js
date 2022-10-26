@@ -1,12 +1,9 @@
 import React from "react";
 import { Col } from "reactstrap";
+import { hobbyList } from "../../info/resume";
 
 const Hobby = () => {
-  const hobbies = [
-    "playing cricket or football",
-    "reading literature",
-    "get close to nature",
-  ];
+  const hobbies = hobbyList;
   return (
     <Col xs={10} className="mt-3 pl-lg-4">
       <h4 className="mb-5  text-center">

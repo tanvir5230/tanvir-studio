@@ -18,7 +18,6 @@ const Contact = () => {
         <Col className="p-0">
           <h3
             className="text-center border-bottom text-uppercase py-2"
-            style={{ fontFamily: "cursive" }}
           >
             contact me
           </h3>

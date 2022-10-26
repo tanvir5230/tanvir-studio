@@ -55,7 +55,6 @@ const Portfolio = () => {
         <Col xs={12} className="p-0">
           <h3
             className="text-center border-bottom text-uppercase py-2"
-            style={{ fontFamily: "cursive" }}
           >
             Portfolio
           </h3>

@@ -1,37 +1,12 @@
 import React from "react";
 import { Col, Progress } from "reactstrap";
+import { backendList, frontEndList, otherSkillsList, otherToolsList } from "../../info/resume";
 
 const Skills = () => {
-  const frontEnd = [
-    { name: "html", value: 85 },
-    { name: "css", value: 80 },
-    { name: "javascript", value: 80 },
-    { name: "react", value: 85 },
-    { name: "redux", value: 80 },
-    { name: "bootstrap", value: 90 },
-  ];
-  const backend = [
-    { name: "Node js", value: 50 },
-    { name: "express", value: 60 },
-    { name: "mongodb", value: 90 },
-    { name: "mongoose", value: 85 },
-    { name: "REST api", value: 80 },
-    { name: "GraphQL", value: 85 },
-  ];
-  const otherTools = [
-    { name: "vs code" },
-    { name: "chrome dev tools" },
-    { name: "firebase" },
-    { name: "heroku" },
-    { name: "git" },
-    { name: "netlify" },
-  ];
-  const otherSkills = [
-    {
-      name: "leadership",
-      experience: "Treasurer,IEEE CUET student branch",
-    },
-  ];
+  const frontEnd = frontEndList;
+  const backend = backendList;
+  const otherTools = otherToolsList;
+  const otherSkills = otherSkillsList;
   return (
     <Col xs={11} className="mt-1">
       <h4 className="mb-5  text-center">

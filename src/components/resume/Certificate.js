@@ -1,26 +1,9 @@
 import React, { useState } from "react";
 import { Card, CardImg, CardImgOverlay, Col, Row } from "reactstrap";
-import frontEnd from "../../photo/certificates/coursera-frontend.PNG";
+import { certificateList } from "../../info/resume";
 
 const Certificate = () => {
-  const certificates = [
-    {
-      name: "Front end development",
-      instructor: "joggesh muppala",
-      platform: "Coursera",
-      link:
-        "https://www.coursera.org/account/accomplishments/certificate/C4GEZ9CSQL8R",
-      img: frontEnd,
-    },
-    {
-      name: "back end development",
-      instructor: "joggesh muppala",
-      platform: "Coursera",
-      link:
-        "https://www.coursera.org/account/accomplishments/certificate/C4GEZ9CSQL8R",
-      img: frontEnd,
-    },
-  ];
+  const certificates = certificateList;
 
   const [indexOfCer, setIndex] = useState(0);
   const limit = certificates.length - 1;

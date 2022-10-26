@@ -1,11 +1,9 @@
 import React from "react";
 import { Col } from "reactstrap";
+import { languageList } from "../../info/resume";
 
 const Language = () => {
-  const language = [
-    { level: "native", name: "bangla" },
-    { level: "proficient", name: "english" },
-  ];
+  const language = languageList;
   return (
     <Col xs={10} className="mt-3 pl-lg-4">
       <h4 className="mb-5  text-center">

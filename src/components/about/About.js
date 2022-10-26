@@ -4,16 +4,10 @@ import "./about.css";
 import { Info } from "./Info";
 import { Description } from "./Description";
 import Services from "./Services";
+import { personalInfo } from "../../info/about";
 
 const About = () => {
-  const age = new Date().getFullYear() - 1997;
-  const info = [
-    { title: "name", text: "Tanvir ibn touhid" },
-    { title: "age", text: age },
-    { title: "Residence", text: "cumilla, Bangladesh" },
-    { title: "email", text: "tanvirbintouhid5230@gmail.com" },
-    { title: "phone", text: "+8801521407975" },
-  ];
+  const info = personalInfo;
   return (
     <Container
       fluid
@@ -24,7 +18,6 @@ const About = () => {
         <Col className="p-0">
           <h3
             className="text-center border-bottom text-uppercase py-2"
-            style={{ fontFamily: "cursive" }}
           >
             about me
           </h3>

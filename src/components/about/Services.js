@@ -1,27 +1,9 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
+import { serviceList } from "../../info/about";
 
 const Services = () => {
-  const services = [
-    {
-      icon: "laptop",
-      title: "full stack development",
-      description:
-        "I can build full stack project with the help of React, mongoDB, node.js, express.js and other necessary tools.",
-    },
-    {
-      icon: "eye",
-      title: "Front End development",
-      description:
-        "I can build front end web application with the help of html,pure css and vanilla javascript.But am also very much expert in frameworks like: bootstrap, React, material ui etc.",
-    },
-    {
-      icon: "mobile",
-      title: "responsive design",
-      description:
-        "I can build web application responsive to all kinds of screen and those also have cross-browser suppport.",
-    },
-  ];
+  const services = serviceList;
   return (
     <>
       <Col xs={12} className="py-5">
